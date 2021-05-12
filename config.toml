@@ -1,0 +1,4 @@
+baseURL = "https://codingezio.github.io/"
+languageCode = "en-us"
+title = "Hey there!"
+theme = "yinyang"
