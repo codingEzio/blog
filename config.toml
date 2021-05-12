@@ -3,10 +3,11 @@ languageCode = "en-us"
 title = "Hey there!"
 theme = "yinyang"
 enableEmoji = true
-canonifyURLs = true
+canonifyURLs = false
 disableHugoGeneratorInject = true
 paginate = 25
 hasCJKLanguage = true
+publishDir = "../codingezio.github.io"
 
 [markup]
 [markup.goldmark]
