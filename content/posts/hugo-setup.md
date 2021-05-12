@@ -4,7 +4,6 @@ date: 2021-05-12T15:50:37+08:00
 draft: false
 ---
 
-
 ### Preparation
 - Download [*hugo*](https://gohugo.io)
     - The [binary](https://github.com/gohugoio/hugo/releases)
@@ -42,11 +41,10 @@ draft: false
     languageCode = "en-us"
     title = "Hey there!"
     theme = "yinyang"
-    enableEmoji = true                          # convert :smile: into emoji
+    enableEmoji = true                          # convert \:smile\: into emoji
     disableHugoGeneratorInject = true           # remove hugo from <meta>
     paginate = 25
     hasCJKLanguage = true
-
     ```
 3. Tweaking *theme*
     ```toml
