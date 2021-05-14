@@ -84,6 +84,16 @@ draft: false
 
 
 ### Prepare for Deployment
+- one more thing: if you wanna maintain the third-party themes by yourself
+    ```bash
+    # step1
+    #   remove any .git folders under `themes/THEME/`
+    #   remove any .gitignore   under `themes/THEME/`
+
+    # step2
+    #   git rm -rf --cached themes/THEME    # if your git can't find this dir!
+    #   git add themes/THEME/
+    ```
 - The repository for *hosting*
     ```bash
     # ROOT
