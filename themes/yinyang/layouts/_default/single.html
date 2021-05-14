@@ -12,9 +12,8 @@
         <header class="post-header">
 
           <ul class="git-metainfo">
-            <li>commit: {{ .GitInfo.Subject }}</li>
-            <li>author: {{ .GitInfo.AuthorName }}</li>
-            <li>datetm: {{ .GitInfo.CommitDate }}</li>
+            <li>last modified : {{ .GitInfo.CommitDate }}</li>
+            <li>commit message: {{ .GitInfo.Subject }}</li>
           </ul>
 
           <h1 class="post-title">{{ .Title }}</h1>
