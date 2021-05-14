@@ -28,7 +28,7 @@ headTitle = "Mensch"
 name = "Github"
 link = "https://github.com/codingezio"
 [[params.socials]]
-name = "HOME"
+name = "Home"
 link = "https://codingezio.github.io"
 [[params.socials]]
 name = "Resume"

@@ -9,7 +9,7 @@ draft: false
     - The [binary](https://github.com/gohugoio/hugo/releases)
     - Move the binary into your existing `$PATH` or append your path to it
 - Create [repositories](https://github.com/new)
-    > To make things easy, make sure all the default branches are `master`
+    > To make things easier, make sure all your branches are on `master`
     - One for *storing the code* <small>(e.g. BLOG)</small>
     - One for *hosting* provided by Github Pages <small>(name: `GH_USERNAME.github.io`)</small>
 
@@ -30,7 +30,7 @@ draft: false
     ```
 
 ### My Own Configuration
-> the theme I'm using: [*yinyang*](https://github.com/joway/hugo-theme-yinyang)
+> the theme I'm using: [yinyang](https://github.com/joway/hugo-theme-yinyang)
 1. Adding theme
     ```bash
     cd HUGO_LOCAL_DIRNAME_WHATEVER
