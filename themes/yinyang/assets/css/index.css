@@ -1,8 +1,8 @@
 /* global */
 
 body {
-  font-family: "Fira Sans", sans-serif;
-  letter-spacing: 0.3px;
+  font-family: "Fira Sans", "Tahoma", sans-serif;
+  letter-spacing: 0.23px;
 }
 
 /* overriding default value from 'flexboxgrid' */
@@ -12,7 +12,7 @@ body {
 
 .post-header .post-title,
 .git-metainfo li {
-  font-family: "Andale Mono", "Ubuntu Mono", "Consolas";
+  font-family: "Andale Mono", "Ubuntu Mono", "Consolas", "Droid Sans Mono";
 }
 
 .header-title,
