@@ -1,18 +1,24 @@
 /* global */
 
 body {
-  font-family: "Fira Sans", "Tahoma", sans-serif;
+  font-family: "Lora", "Georgia", serif;
   letter-spacing: 0.23px;
 }
 
 /* overriding default value from 'flexboxgrid' */
 .header-items {
   justify-content: space-between !important;
+  font-variant: small-caps;
+  font-weight: bolder;
 }
 
 .post-header .post-title,
 .git-metainfo li {
   font-family: "Andale Mono", "Ubuntu Mono", "Consolas", "Droid Sans Mono";
+}
+
+.git-metainfo li {
+  list-style-type: "☞" !important;
 }
 
 .header-title,
@@ -204,10 +210,19 @@ a:hover {
 
 .post-content p {
   hyphens: auto;
-  line-height: 1.8;
+  line-height: 1.85;
   /* text-align: justify; */
   text-justify: ideographic;
   margin-bottom: 1em;
+}
+
+.post-content blockquote p {
+  line-height: 1.45em;
+  font-style: italic;
+}
+.post-content blockquote p code,
+.post-content blockquote p a {
+  font-style: normal;
 }
 
 .related-content {
@@ -263,6 +278,11 @@ a:hover {
   }
   .post-content p {
     letter-spacing: 0.05em;
+  }
+
+  .git-metainfo li {
+    font-size: 14px;
+    white-space: nowrap;
   }
 }
 
