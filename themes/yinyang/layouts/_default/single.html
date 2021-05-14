@@ -12,8 +12,12 @@
         <header class="post-header">
 
           <ul class="git-metainfo">
-            <li>last modified : {{ .GitInfo.CommitDate }}</li>
-            <li>commit message: {{ .GitInfo.Subject }}</li>
+            <!--
+              <li>&nbsp;{{ .GitInfo.CommitDate }}</li>
+              <li>&nbsp;{{ .GitInfo.Subject }}</li>
+            -->
+            <li>&nbsp;{{ .Site.Data.MyGitInfo.CommitDate }}</li>
+            <li>&nbsp;{{ .Site.Data.MyGitInfo.Subject }}</li>
           </ul>
 
           <h1 class="post-title">{{ .Title }}</h1>

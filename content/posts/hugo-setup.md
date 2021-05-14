@@ -37,16 +37,33 @@ draft: false
     git clone https://github.com/joway/hugo-theme-yinyang themes/yinyang
     ```
 2. Tweaking *hugo*
-    ```toml
-    languageCode = "en-us"
-    title = "Hey there!"
-    theme = "yinyang"
-    enableEmoji = true                          # convert \:smile\: into emoji
-    disableHugoGeneratorInject = true           # remove hugo from <meta>
-    paginate = 25
-    hasCJKLanguage = true
-    EnableGitInfo = true
-    ```
+    - `/config.toml`
+        ```toml
+        languageCode = "en-us"
+        title = "Hey there!"
+        theme = "yinyang"
+        enableEmoji = true                          # convert \:smile\: into emoji
+        disableHugoGeneratorInject = true           # remove hugo from <meta>
+        paginate = 25
+        hasCJKLanguage = true
+        EnableGitInfo = true
+        ```
+    - `/data/`
+        > The build-in [`.GitInfo`](https://github.com/bep/gitmap/blob/master/gitmap.go) can't quite get the correct information, so I wrote a script to grab it manually.
+        - storage
+            > Files under this dir could be either .json, .yaml or .toml.
+            ```json
+            {
+              "Subject": "Removed unncessary metainfo",
+              "CommitDate": "Fri May 14 09:56:24 2021 +0800"
+            }
+            ```
+        - access
+            ```jsx
+            // .Site.DATA.DATA_FILE.KEY
+            {{ .Site.Data.MyGitInfo.Subject }}
+            {{ .Site.Data.MyGitInfo.CommitDate }}
+            ```
 3. Tweaking *theme* config
     ```toml
     [author]
@@ -68,12 +85,13 @@ draft: false
         name = "Github"
         link = "https://github.com/codingezio"
     [[params.socials]]
-        name = "HOME"
+        name = "Home"
         link = "https://codingezio.github.io"
     ```
 4. Tweaking *theme* template
     - HTML: `HUGO/themes/THEME/layouts/_default/{list,single}.html`
         ```html
+        <!-- example -->
         <ul class="git-metainfo">
             <li>commit: {{ .GitInfo.Subject }}</li>
             <li>author: {{ .GitInfo.AuthorName }}</li>
@@ -91,7 +109,7 @@ draft: false
     #   remove any .gitignore   under `themes/THEME/`
 
     # step2
-    #   git rm -rf --cached themes/THEME    # if your git can't find this dir!
+    #   git rm -rf --cached themes/THEME  # run this if your git doesn't recognise this folder
     #   git add themes/THEME/
     ```
 - The repository for *hosting*
