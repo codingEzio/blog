@@ -45,8 +45,9 @@ draft: false
     disableHugoGeneratorInject = true           # remove hugo from <meta>
     paginate = 25
     hasCJKLanguage = true
+    EnableGitInfo = true
     ```
-3. Tweaking *theme*
+3. Tweaking *theme* config
     ```toml
     [author]
         name = "Mensch"
@@ -64,12 +65,23 @@ draft: false
         mainSections = ["posts"]
         headTitle = "Mensch"
     [[params.socials]]
-        name = "About Me"
-        link = "https://codingezio.github.io"
-    [[params.socials]]
         name = "Github"
         link = "https://github.com/codingezio"
+    [[params.socials]]
+        name = "HOME"
+        link = "https://codingezio.github.io"
     ```
+4. Tweaking *theme* template
+    - HTML: `HUGO/themes/THEME/layouts/_default/{list,single}.html`
+        ```html
+        <ul class="git-metainfo">
+            <li>commit: {{ .GitInfo.Subject }}</li>
+            <li>author: {{ .GitInfo.AuthorName }}</li>
+            <li>datetm: {{ .GitInfo.CommitDate }}</li>
+        </ul>
+        ```
+    - CSS: `HUGO/assets/CSS_FILE.css`
+
 
 ### Prepare for Deployment
 - The repository for *hosting*
