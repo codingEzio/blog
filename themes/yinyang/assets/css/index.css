@@ -21,11 +21,6 @@ body {
   list-style-type: "☞" !important;
 }
 
-/* temporarily */
-.git-metainfo {
-  display: none !important;
-}
-
 .header-title,
 .post-date {
   display: none !important;

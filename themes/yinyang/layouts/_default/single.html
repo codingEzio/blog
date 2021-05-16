@@ -11,15 +11,6 @@
         </div>
         <header class="post-header">
 
-          <ul class="git-metainfo">
-            <!--
-              <li>&nbsp;{{ .GitInfo.CommitDate }}</li>
-              <li>&nbsp;{{ .GitInfo.Subject }}</li>
-            -->
-            <li>&nbsp;{{ .Site.Data.MyGitInfo.CommitDate }}</li>
-            <li>&nbsp;{{ .Site.Data.MyGitInfo.Subject }}</li>
-          </ul>
-
           <h1 class="post-title">{{ .Title }}</h1>
           {{ if in .Site.Params.mainSections .Type }}
           <div class="row post-desc">
@@ -39,6 +30,15 @@
 
           {{ .Site.Params.postHeaderContent | safeHTML }}
           {{ .Content }}
+
+          <ul class="git-metainfo">
+            <li>&nbsp;{{ .GitInfo.CommitDate }}</li>
+            <li>&nbsp;{{ .GitInfo.Subject }}</li>
+            <!--
+            <li>&nbsp;{{ .Site.Data.MyGitInfo.CommitDate }}</li>
+            <li>&nbsp;{{ .Site.Data.MyGitInfo.Subject }}</li>
+            -->
+          </ul>
         </div>
 
         <div class="row middle-xs">
